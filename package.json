@@ -1,0 +1,11 @@
+{
+  "name": "genius-pi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "push": "scp ./genius.py pi@192.168.15.28:genius.py",
+    "start" : "ssh pi@192.168.15.28 nohup python genius.py",
+    "go": "yarn push && yarn start"
+  }
+}
