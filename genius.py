@@ -136,17 +136,16 @@ def getColorSequence():
                 if(selectedColor != color):
                         playEndGame()
 
-
-# Wait one second before the game starts
-sleep(1)
-
 # Buzz sound warning the program started
-for i in range(0,5):
-        playNote(0.15)
-        sleep(0.15)
+def beepToStart():
+        for i in range(0,5):
+                playNote(0.15)
+                sleep(0.15)
+        sleep(1)
 
-# Wait one second before the game starts
+# sleep and beep before starts
 sleep(1)
+beepToStart()
 
 # Run
 try:
